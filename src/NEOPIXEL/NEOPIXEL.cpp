@@ -83,7 +83,7 @@ void timeCycle(int sec, int min, int h, int mode) {
             break;
     case 4: cSec = strip.Color(255, 0, 0); 
             cMin = strip.Color(255, 255, 0); 
-            cHour = strip.Color(255, 0, 255);
+            cHour = strip.Color(255, 255, 255);
             break;                       
   }
 

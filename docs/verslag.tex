@@ -36,6 +36,8 @@ Dit is mijn concept ontwerp:
 \section{Product}
 \subsection{Ontwerp}
 Dit is het ontwerp van de behuizing voor de lazersnijder.
+\\
+\textbf{Voor de illustrator bestanden zie: \url{https://github.com/DDuunk/Clock} }
 \\ \\
 \includegraphics[scale=0.4]{klok}
 \\ \\
@@ -157,9 +159,22 @@ void MPU_INIT() {
     Serial.println(DEVICE_TO_USE);
     Wire.begin();
     MPU.selectDevice(DEVICE_TO_USE);
-    MPU.init(MPU_UPDATE_RATE, MPU_MAG_MIX_GYRO_AND_MAG, MAG_UPDATE_RATE, MPU_LPF_RATE); 
+    MPU.init(MPU_UPDATE_RATE, MPU_MAG_MIX_GYRO_AND_MAG, 
+             MAG_UPDATE_RATE, MPU_LPF_RATE); 
 }
 \end{lstlisting}
 \textbf{Voor de volledige code zie: \url{https://github.com/DDuunk/Clock} }
 
+\section{Problemen}
+Tijdens het maken van het "Smart Object" ben ik op een aantal problemen beland, dit zijn deze problemen: 
+\\ \\
+Aangezien ik een NeoPixel Ring van 24 leds gebruik moest ik de tijd die normaal over 60 verspreid wordt omzetten naar 24.
+Dit zorgte ook ervoor dat de 24ste led aan bleef staan waardoor ik in de code moest toevoegen dat als de led naar de volgende led sprong hij de vorige led uitschakelde.
+Het huidige probleem is dat deze code maar tijdelijk werkt, na een tijdje blijven namelijk alle leds aan staan. Dit heeft te maken met een fout in het algoritme.
+
+\section{Resultaat}
+Dit is het resultaat van mijn "Smart Object": 
+\\ \\
+\includegraphics[scale=0.15]{resultaat1}
+\includegraphics[scale=0.171]{resultaat2}
 \end{document}
