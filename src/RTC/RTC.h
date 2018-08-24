@@ -1,7 +1,7 @@
 #ifndef RTC_H
 #define RTC_H
 
-//#define DEBUG_MODE
+#define DEBUG_MODE
 
 #include "Arduino.h"
 #include <Wire.h>
